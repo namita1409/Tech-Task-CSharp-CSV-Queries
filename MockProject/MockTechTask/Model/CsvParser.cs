@@ -117,8 +117,6 @@ namespace MockTechTask.Model
 
             if (record.Count > 0)
                 yield return record;
-
-
         }
     }
 }
