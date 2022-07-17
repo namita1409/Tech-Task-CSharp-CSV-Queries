@@ -1,5 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
+using MockTechTask.FileReader;
 using MockTechTask.Model;
+using MockTechTask.Query;
 
 const string fileName = @"D:\Learning\MockProject\input\input.csv";
 

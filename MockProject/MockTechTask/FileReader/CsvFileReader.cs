@@ -1,14 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.IO;
+﻿
+using MockTechTask.CsvParser;
 using MockTechTask.Model;
-using System.Text.RegularExpressions;
 
-
-namespace MockTechTask.Model
+namespace MockTechTask.FileReader
 {
     public class CsvFileReader : ICsvFileReader
     {                   

@@ -1,6 +1,6 @@
 ﻿using System.Text;
 
-namespace MockTechTask.Model
+namespace MockTechTask.CsvParser
 {
     public static class CsvParser
     {

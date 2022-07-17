@@ -30,8 +30,7 @@ namespace MockTechTask.Model
                + " Phone2 "+Phone2 +"\n"
                +"Email "+ Email + "\n" 
                +"Web "+ Web+"\n ";
-        }
-        
+        }      
 
     }
 }
