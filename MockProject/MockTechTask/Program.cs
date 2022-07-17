@@ -33,7 +33,7 @@ try
                 displayPerson(person);
                 break;
             case 2:
-                person = query.PersonLivingInCountyDerbyshire(personList,"Derbyshire");
+                person = query.PersonLivingInCountyDerbyshire(personList, "Derbyshire");
                 displayPerson(person);
                 break;
             case 3:

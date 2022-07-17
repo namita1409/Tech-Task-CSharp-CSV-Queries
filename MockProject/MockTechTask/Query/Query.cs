@@ -9,26 +9,21 @@ using System.Threading.Tasks;
 namespace MockTechTask.Query
 {
     public class Query
-    {
-        int count = 0;
-
+    {       
         public List<Person> PersonContainsCompanyEsq(List<Person> personList, string searchString)
         {            
             //search every person who has Esq in their company name            
             var result = from person in personList
                          where person.Company.Contains(searchString)
-                         select person;          
-                    
+                         select person;
             return result.ToList();
         }
         public List<Person> PersonLivingInCountyDerbyshire(List<Person> personList, string searchString)
-        {       
-
+        {   
             //finding number of people in a given county 
             var result = from person in personList
                          where person.County == searchString
-                         select person;           
-                        
+                         select person;
             return result.ToList();
         }
         public List<Person> PersonWhoseHouseNoIsThreeDigit(List<Person> personList)
@@ -44,8 +39,7 @@ namespace MockTechTask.Query
                 string sPattern = "^\\d{3}\\s";
 
                 if (Regex.IsMatch(address, sPattern, RegexOptions.IgnoreCase))
-                {
-                    count++;
+                {                    
                     addressList.Add(person);
                 }
             }            
@@ -92,8 +86,7 @@ namespace MockTechTask.Query
                 long phone1 = phoneNumberConvert(strPhone1);
                 long phone2 = phoneNumberConvert(strPhone2);
                 if (phone1 > phone2)
-                {
-                    count++;
+                {                    
                     phone1List.Add(person);
                 }
             }               
@@ -105,7 +98,6 @@ namespace MockTechTask.Query
             Regex regexObj = new Regex(@"[^\d]");
             //converting to long
             return Convert.ToInt64(regexObj.Replace(phoneNumber, ""));
-        }
-       
+        }       
     }
 }
