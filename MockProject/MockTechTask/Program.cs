@@ -71,7 +71,6 @@ catch (Exception ex)
 {
     Console.WriteLine(ex.Message);
 }
-
 static void displayPerson(List<Person> person)
 {
     Console.WriteLine($"Count { person.Count }");
