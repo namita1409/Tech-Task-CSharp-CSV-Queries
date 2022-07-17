@@ -18,6 +18,7 @@ namespace MockTechTaskTest
         [Test]
         public void DisplayPersonContainsCompanyEsq_Should_Return_CorrectResult()
         {
+            string searchString = "Esq";
             var person = GetFakePerson();
             var expectedResult = new List<Person>()
             {
@@ -36,13 +37,14 @@ namespace MockTechTaskTest
                     Web = "http://www.thompsonmichaelcesq.co.uk"
                 }
             };
-            var result = Query.PersonContainsCompanyEsq(person);
+            var result = Query.PersonContainsCompanyEsq(person,searchString);
             result.Should().BeEquivalentTo(expectedResult);
         }
 
         [Test]
         public void DisplayPersonLivingInCountyDerbyshire_Should_Return_CorrectResult() 
         {
+            string searchString = "Derbyshire";
             var person = GetFakePerson();
             var expectedResult = new List<Person>()
             {
@@ -61,7 +63,7 @@ namespace MockTechTaskTest
                     Web = "http://www.maxvideo.co.uk"
                 }
             };
-            var result = Query.PersonLivingInCountyDerbyshire(person);
+            var result = Query.PersonLivingInCountyDerbyshire(person, searchString);
           //  Assert.That(result, Is.EqualTo(expectedResult));
           result.Should().BeEquivalentTo(expectedResult);
         }

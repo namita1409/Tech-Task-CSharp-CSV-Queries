@@ -12,10 +12,8 @@ namespace MockTechTask.Query
     {
         int count = 0;
 
-        public List<Person> PersonContainsCompanyEsq(List<Person> personList)
-        {
-            string searchString = "Esq";
-
+        public List<Person> PersonContainsCompanyEsq(List<Person> personList, string searchString)
+        {            
             //search every person who has Esq in their company name            
             var result = from person in personList
                          where person.Company.Contains(searchString)
@@ -23,9 +21,8 @@ namespace MockTechTask.Query
                     
             return result.ToList();
         }
-        public List<Person> PersonLivingInCountyDerbyshire(List<Person> personList)
-        {
-            string searchString = "Derbyshire";
+        public List<Person> PersonLivingInCountyDerbyshire(List<Person> personList, string searchString)
+        {       
 
             //finding number of people in a given county 
             var result = from person in personList
