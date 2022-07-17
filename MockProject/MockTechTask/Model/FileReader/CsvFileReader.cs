@@ -36,8 +36,8 @@ namespace MockTechTask.Model
                     p.Postal = line[i + 6];
                     p.Phone1 = line[i + 7];
                     p.Phone2 = line[i + 8];
-                    p.email = line[i + 9];
-                    p.web = line[i + 10];
+                    p.Email = line[i + 9];
+                    p.Web = line[i + 10];
                     personList.Add(p);
                 }
             }

@@ -2,9 +2,12 @@
 using MockTechTask.Model;
 
 const string fileName = @"D:\Learning\MockProject\input\input.csv";
-CsvFileReader csvFileReader = new CsvFileReader();
+
+//Initializing the program /loading the file
+ICsvFileReader csvFileReader = new CsvFileReader();
 List<Person> personList = csvFileReader.FileReader(fileName);
 
+// Asking user for the inputs
 Console.WriteLine("Please choose your option  " + "\n");
 Console.WriteLine("OPtion 1 : Every person who has “Esq” in their company name.");
 Console.WriteLine("OPtion 2 : Every person who lives in Derbyshire");
@@ -16,32 +19,48 @@ Console.WriteLine("OPtion 6 : Every person whose first phone number is numerical
 int option = Convert.ToInt32(Console.ReadLine());
 
 Query query = new Query();
+List<Person> person = new List<Person>();
 
-switch (option) {
+switch (option) 
+{
     case 1:
-        query.DisplayPersonContainsCompanyEsq(personList);
+        person = query.DisplayPersonContainsCompanyEsq(personList);
+        displayPerson(person);
         break;
     case 2:
-        int count = query.DisplayPersonLivingInCountyDerbyshire(personList);
+        person = query.DisplayPersonLivingInCountyDerbyshire(personList);
+        displayPerson(person);
         break;
     case 3:
-        query.DisplayPersonWhoseHouseNoIsDigit(personList);
+        person = query.DisplayPersonWhoseHouseNoIsDigit(personList);
+        displayPerson(person);
         break;
     case 4:
-        query.DisplayPersonWhoseWebUrlIsLongThanThirtyFive(personList);
+        person = query.DisplayPersonWhoseWebUrlIsLongThanThirtyFive(personList);
+        displayPerson(person);
         break;
     case 5:
-        query.DisplayPersonWhoLivesInPostcode(personList);
+        person = query.DisplayPersonWhoLivesInPostcode(personList);
+        displayPerson(person);
         break;
     case 6:
-        query.DisplayPersonWhosePhoneNoIsLarger(personList);
+        person = query.DisplayPersonWhosePhoneNoIsLarger(personList);
+        displayPerson(person);
         break;
     default:
         Console.WriteLine("invalid option, please enter the above mentioned options");
         break;
 
 }
-
+     static void displayPerson(List<Person> person)
+     {
+        Console.WriteLine($"Count { person.Count }");
+        foreach (var p in person)
+        {
+            int index = person.IndexOf(p);
+            Console.WriteLine($"{ index + 1 } { p.FirstName } { p.Company }"); ;
+        }
+     }
 
 
 

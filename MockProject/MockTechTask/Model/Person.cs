@@ -15,8 +15,8 @@ namespace MockTechTask.Model
         public string Postal { get; set; }
         public string Phone1 { get; set; }
         public string Phone2 { get; set; }
-        public string email { get; set; }
-        public string web { get; set; }
+        public string Email { get; set; }
+        public string Web { get; set; }
 
         public string toString() {
             return "First_Name = "+ FirstName + "\n "
@@ -28,8 +28,8 @@ namespace MockTechTask.Model
                 + "Postal "+Postal+ " \n" 
                + " Phone1 "+ Phone1 +" \n"
                + " Phone2 "+Phone2 +"\n"
-               +"email "+ email + "\n" 
-               +"web "+ web+"\n ";
+               +"Email "+ Email + "\n" 
+               +"Web "+ Web+"\n ";
         }
         
 
