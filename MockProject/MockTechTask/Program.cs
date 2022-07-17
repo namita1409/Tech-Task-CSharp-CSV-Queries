@@ -26,19 +26,19 @@ List<Person> person = new List<Person>();
 switch (option) 
 {
     case 1:
-        person = query.DisplayPersonContainsCompanyEsq(personList);
+        person = query.PersonContainsCompanyEsq(personList);
         displayPerson(person);
         break;
     case 2:
-        person = query.DisplayPersonLivingInCountyDerbyshire(personList);
+        person = query.PersonLivingInCountyDerbyshire(personList);
         displayPerson(person);
         break;
     case 3:
-        person = query.DisplayPersonWhoseHouseNoIsDigit(personList);
+        person = query.PersonWhoseHouseNoIsThreeDigit(personList);
         displayPerson(person);
         break;
     case 4:
-        person = query.DisplayPersonWhoseWebUrlIsLongThanThirtyFive(personList);
+        person = query.PersonWhoseWebUrlIsLongThanThirtyFive(personList);
         displayPerson(person);
         break;
     case 5:
@@ -46,7 +46,7 @@ switch (option)
         displayPerson(person);
         break;
     case 6:
-        person = query.DisplayPersonWhosePhoneNoIsLarger(personList);
+        person = query.PersonWhosePhoneNo1IsLarger(personList);
         displayPerson(person);
         break;
     default:
@@ -60,7 +60,7 @@ switch (option)
         foreach (var p in person)
         {
             int index = person.IndexOf(p);
-            Console.WriteLine($"{ index + 1 } { p.FirstName } { p.Company }"); ;
+            Console.WriteLine($"{ index + 1 } { p.FirstName } { p.Postal }"); ;
         }
      }
 

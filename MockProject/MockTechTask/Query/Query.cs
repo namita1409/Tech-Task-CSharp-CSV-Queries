@@ -12,7 +12,7 @@ namespace MockTechTask.Query
     {
         int count = 0;
 
-        public List<Person> DisplayPersonContainsCompanyEsq(List<Person> personList)
+        public List<Person> PersonContainsCompanyEsq(List<Person> personList)
         {
             string searchString = "Esq";
 
@@ -23,7 +23,7 @@ namespace MockTechTask.Query
                     
             return result.ToList();
         }
-        public List<Person> DisplayPersonLivingInCountyDerbyshire(List<Person> personList)
+        public List<Person> PersonLivingInCountyDerbyshire(List<Person> personList)
         {
             string searchString = "Derbyshire";
 
@@ -34,7 +34,7 @@ namespace MockTechTask.Query
                         
             return result.ToList();
         }
-        public List<Person> DisplayPersonWhoseHouseNoIsDigit(List<Person> personList)
+        public List<Person> PersonWhoseHouseNoIsThreeDigit(List<Person> personList)
         {
             //Every person whose house number is exactly three digits.
             var result = from person in personList
@@ -54,7 +54,7 @@ namespace MockTechTask.Query
             }            
             return addressList;
         }
-        public List<Person> DisplayPersonWhoseWebUrlIsLongThanThirtyFive(List<Person> personList)
+        public List<Person> PersonWhoseWebUrlIsLongThanThirtyFive(List<Person> personList)
         {
             //Every person whose website URL is longer than 35 characters
             var result = from person in personList
@@ -82,7 +82,7 @@ namespace MockTechTask.Query
             }                         
             return postalList;
         }
-        public List<Person> DisplayPersonWhosePhoneNoIsLarger(List<Person> personList)
+        public List<Person> PersonWhosePhoneNo1IsLarger(List<Person> personList)
         {
             var result = from person in personList
                          select person;
