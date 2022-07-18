@@ -91,7 +91,7 @@ namespace MockTechTaskTest
             result.Should().BeEquivalentTo(expectedResult);
         }
        [Test]
-        public void PersonLivingInCountyDerbyshire_Should_Throw_Exception_For_Null_InputString()
+        public void PersonLivingInCountyDerbyshire_Should_Empty_PersonList_For_Null_InputString()
         {
             string searchString = null;
             var person = GetFakePerson();
